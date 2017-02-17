@@ -1,0 +1,34 @@
+1)
+
+It is not an error to have a aggregate funtion in the Having Clause
+The diffiferce is that Having clausehas to be used After the aggration 
+and where as the where clause can be use before the aggragation. 
+
+2)
+	Make	Count(*)
+ 
+	Ford	4
+	Audi    2
+3)
+This query subtracts 11 years from the current date and then prints out the 
+current week of that date.
+
+4)
+This query essentially gets all the tracks id and sums up all the tracks with
+the same id, printing out only all the tracks id with the number of 
+tracks they made.
+
+5)
+This query gets all the artist and counts only the ones who name start with
+THE at the end printing out a value of the amount of artist who Name start 
+with The.
+
+6)
+ This query prints ot the salesid and the last name of that sales id person who 
+are related tot he studio and counts how many times its related print out at the end
+the count of relations between the sales id and he studio.
+
+7)
+SELECT count(Distinct S.SalesID) 
+AS "Number oF Sales People Representing at Least One Studio EACH"
+FROM  SalesPeople S JOIN Studios ST ON(S.SalesID=ST.SalesID); 

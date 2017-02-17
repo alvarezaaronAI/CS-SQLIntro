@@ -1,0 +1,41 @@
+1)
+Corralated subquerries are dependent meaning it gives a one row answer unlike
+subquerries give you mutiple rows and colums.
+
+2)
+IN checks wether two querries data are the same, if so then IN output is any
+data that is the same between two querries. Unlike the Exists, it checks wether
+the data between one querrie exist inside the other querrie giving an true or false
+scenrio
+
+3)
+The problem with the code is that is setting both querries equal to eachother
+giving you mutiple rows, essentially both querries giving more then one row, so
+in order execute you must put an IN to help it execute. Without the IN, the
+querry is attempting to execute mutiple rows but cant becuase the = sign.
+
+4)
+  a)
+The output of this query gives you an of the make and the model of the car
+whose wieght is greater then the monsters weight
+  b)
+The output of this query gives you an output of the make and model of the car
+whose wieght is less then the monsters weight
+
+5)
+This query essentially gets all the last names of all sales people whose are both 
+in Members and Studios.
+
+6)
+This query essentially counts all the artist whos the Artist names start with The
+
+7)
+This query essentially gets every artist identification and checks wether the members
+identification is greater then 2 resulting as only the artist names whose members id is greater
+then 2. 
+
+8)
+SELECT ArtistName FROM Artists WHERE ArtistID IN 
+( SELECT ArtistID FROM XrefArtistsMembers
+WHERE MemberID IN
+( SELECT MemberID FROM Members WHERE Gender LIKE "%F%"));

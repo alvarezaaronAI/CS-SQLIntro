@@ -1,0 +1,29 @@
+1)
+
+SELECT A.ArtistName, Count(M.MemberID) As "Members Counts Per Artist"
+FROM Artists A JOIN XrefArtistsMembers X USING (ArtistID) 
+JOIN Members M USING (MemberID) 
+GROUP BY A.ArtistID;
+
+2)
+
+SELECT Genre, Count(TitleID) AS "Number Of Genres With At Least Two Titles"
+FROM Titles GROUP BY Genre
+HAVING Count(*) > 2;
+
+3)
+
+SELECT T.Genre, AVG(TR.lengthseconds) AS "Avarage Length in seconds for Tracks"
+FROM Titles T JOIN Tracks TR USING (TitleID)
+GROUP BY T.Genre;
+
+4)
+
+SELECT Genre, Count(Title) AS "Number Of Titles Each Genre"
+FROM Genre LEFT JOIN Titles USING (Genre) GROUP BY Genre;
+
+5)
+
+SELECT Count(DISTINCT A.ArtistID) AS "Number Of Artist Who recorded Alt Genre"
+FROM Artists A JOIN Titles T ON (A.ArtistID = T.ArtistID) 
+WHERE (Genre = 'alternative');

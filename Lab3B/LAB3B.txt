@@ -1,0 +1,18 @@
+1) SELECT SalesID,Firstname,LastName FROM SalesPeople JOIN Studios USING (SalesID);
+
+2) SELECT SalesPeople.SalesID, SalesPeople.LastName FROM SalesPeople JOIN Members USING (SalesID)
+WHERE Birthday LIKE ('_ _ _ _-07-');
+
+3) SELECT DISTINCT StudioName FROM Studios JOIN Titles USING (StudioID) WHERE Genre NOT LIKE ('%jazz');
+
+4) SELECT StudioName, TrackTitle FROM Studios JOIN Titles USING (StudioID) JOIN Tracks USING (TitleID)
+ORDER BY StudioID;
+
+5)
+   a) SELECT TrackTitle FROM Tracks JOIN Titles USING (TitleID) JOIN Artists USING (ArtistID) JOIN xrefArtistsMembers
+USING (ArtistID) JOIN Members USING (MemberID) WHERE FirstName = 'Bryce' && LastName = 'Sanders';
+   b) I Would probably look at the MemeberID and which only happens that this Bryce Sanders has a memeber ID of 3
+therefore if i could possible add another conditinal statement where it only selects this specific Bryce Sanders, it will
+eliminate all the other possible named Bryce Sanders with different songs
+
+6) SELECT FirstName,LastName CASE WHEN WorkPhone is null then HomePhone ELSE WorkPhone END FROM Members;

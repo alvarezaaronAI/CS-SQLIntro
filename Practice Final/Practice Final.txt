@@ -1,0 +1,30 @@
+1)
+   a) This Gives you an error because inside the Where clause cannot solve for the average 
+rather it just compares two things, solving is not what a where clause does.
+   b) To fix this you just need to solve for average using a subquery and solving the average
+and actually letting the where clause compare the solved average and comparing the base and avg
+SELECT LastName FROM SalesPeople WHERE base < (SELECT avg(base) FROM SalesPeople); 
+
+2)
+   a) You need to add all the people om the military units and there ranks with serial numbers
+including Smith with special rank of Lieutenant with Serial Num: 123. 
+   b) //To add a military unit in general
+	INSERT Personnel VALUES ( (RankOfMilitaryUnit),(LastNameOFMilitaryUnit),(FirstNameOFMilitaryUnit),(SerialNumOFMilitaryUnit));
+      //To add Smith 
+        INSERT Personnel VALUES ( Lieutenant, Smith, (SmithsFirstName), 123);
+3)
+   a) This means to ask what is 1 = false since 1 = 1 is 1 it replaces that with 1 and false is replace to 0 
+so is asking for 1 = 0, since 1 = 0 is not true it returns false. Which is 0.
+   b) The query returns 0 since null is null is true which returns 1 and it compares with 0
+so its replaces everything like, 0 = 1 and since its not true it returns false which is 0.
+The reason it returns 0 is because 0 is not the same as 1 returning false giving final answer 0.
+
+4)
+    DDL which stand for data definition language. Which is used to create databases.
+
+5) This query basically displays the average birthday of all the members in each band or artist.
+
+6) This query basically delets all members who did not recorded any song.
+
+7) 
+  

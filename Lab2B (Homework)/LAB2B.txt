@@ -1,0 +1,23 @@
+1) This will SELECT and show all the fields of LastNames and Initials FROM the 
+table Sales People.
+
+2) This will SELECT the all fields FROM the table Tracks and ORDER BY Acsending order.
+
+3) This will SELECT and show all the fields of FirstName FROM the table Members WHERE it will
+only show the fields where the FirstName is greater than "Maria"
+
+4) This will SELECT and show all the fields of LastName FROM the table Members WHERE it will
+only show the fields where LastName emails have no email.
+
+5) This will SELECT and show all the fields of LastName FROM the table Members WHERE FirstName
+is equal to "Roberto"
+
+6) SELECT LastNames, MemberIDs FROM Memebers Where SalesID != 2;
+
+7) SELECT FirstNames, LastNames FROM Titles Where (Genre = 'alternative');
+
+8) SELECT FirstNames, LastNames FROM Titles Where (Genre != 'jazz');
+
+9) SELECT Genre FROM Titles WHERE 
+
+10) SELECT Region FROM Artist WHERE (Gender = "M" && City = "A%");

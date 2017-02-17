@@ -1,0 +1,23 @@
+1)
+In order to enter the following query you have to consider the fact the new
+information that cannot have the same primary key since the primary key is a 
+unique key
+
+2)
+if you run the delete statement then it would just delete that row it self.
+
+3)
+This query essentially inputs information into the table Sales People. 
+This is basically entering a new person with its own unique key 5 and name
+Montebatten Liz with and its own base and its own supervisor code.
+
+4)
+This query essentially rewrites any information inside the sales people table
+and it updates the base only for the row that contains Montbatten Liz.
+
+5)
+Essentially this query would drop the table without deleting the actuall information
+if the Monarchs table actually exist.
+
+6)
+UPDATE Members SET City = "Alvarez" WHERE City = "Alverez" AND Region = "TX";

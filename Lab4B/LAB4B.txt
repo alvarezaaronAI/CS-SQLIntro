@@ -1,0 +1,22 @@
+1) SELECT A.ArtistName, A.ArtistID FROM Artists A LEFT JOIN Titles T ON (A.ArtistID=T.ArtistID)
+WHERE WebAddress IS NOT NULL AND T.Title IS NULL;
+
+2) SELECT FirstName AS Subordinate, SalesID AS Supervisor FROM SalesPeople WHERE Supervisor IS
+NOT NULL;
+
+3) SELECT SP2.FirstName FROM SalesPeople SP1 JOIN SalesPeople SP2 ON (SP1.Supervisor=SP2.SalesID);
+
+4) SELECT S.SalesID, CASE WHEN MemberID IS NULL THEN 'No Members Assigned' ELSE MemberID END AS 
+Clients FROM SalesPeople S LEFT JOIN Members M ON (M.SalesID=S.SalesID);
+
+5) SELECT S.FirstName FROM SalesPeople S LEFT JOIN Members M ON (S.SalesID=M.SalesID AND M.Region!='CA')
+WHERE M.SalesID IS NULL;
+
+6) 
+    a) SELECT DISTINCT S.FirstName FROM SalesPeople S JOIN Members M ON (S.SalesID=M.SalesID) 
+WHERE M.Region != "CA";
+    b) The results are basically different for the reason that the first query will not show the
+sale person who are not located in california, even if the sale person has others members who 
+are not located in california, while the second query does give you the same issue, it would just
+remove the member of the list resulting the same query without the members who are not located 
+in california. 

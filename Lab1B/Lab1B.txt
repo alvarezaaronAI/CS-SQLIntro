@@ -1,0 +1,22 @@
+1)SQL
+
+2)This means that what we do is not required a series of steps that will solve a problem like
+algorithm, rather it will be described by the programmer what specifically what data he/she wants. 
+
+3)Titles
+
+4)Tracks
+
+5)TitleId 
+
+6)Members
+
+7)This just means that for every title there is a studio behind it and if you want to know
+more about the studio you just go more into the studios folder and see what information does the studio have.
+
+8) This just means that that there is sales person assign to every member and to figure out
+the sales persons id you just go to the next folder and see its information. 
+
+9) Because you need to know the information for each artist (bullets) and you need to know which of the memebers in 
+which we wanna access the information, and finally once we get to the memebers information we can access individuals 
+members of the Bullets artist. We need all three to access its content. 

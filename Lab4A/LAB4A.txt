@@ -1,0 +1,30 @@
+1) The difference is that an inner join returns values that both tables that have the same
+thing in commons, eg MemberID from two tables where the both have member id. Outer Join is
+where both of the tables wouldnt have anything in common but you want to display them side by
+side. Ex) Members table and Tracks, have nothing in common but you want both tables side by side
+you will use outer join.
+
+2) To not cunfuse the table what information you want to recieve or compare or deal with. 
+
+3) This is wrong since it would check also the last name of the sales person, so if its that case
+lets just say we have a scenerio where the last name of the sales person is Sanders, causing that specific sanders
+to be crossed out as well.
+
+4) The first query will remove the entire band if one of the members born from 1960 meanwhile
+the other query will just not display the member whos was born in the 1960, not affecting the band it self.
+
+
+6) This query will display all the genres and titles next to each other, identifying each title with
+its proper genre and alphabetically order them by genre. If theres no title with the specific
+genre given, it will display nothing(null). 
+
+7) This will display the genre where theres no titles what so ever, displaying a table with null
+titles.
+
+8) This will display all the sales id with last names of the Sales people with the exception that,
+when the salesperson doesnt have a studio name, instead of displaying null it will display none.
+
+9)This query will display all the sales id from the sales people where the studios is not null and 
+and they are not from california.
+
+10)SELECT TrackTitle, IF (RealAud = "1", RealAud,"Not Available") FROM Tracks;

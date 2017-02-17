@@ -1,0 +1,24 @@
+1) 
+   a) explicit
+   b)name column join
+
+2) This query will list the last names of the memeber and its memebers ID and the initials of 
+the salespeople where the last name and the memebers id will display its correct salesperson 
+initials right next to it.
+
+3)  This query will list the Genre of each title given the titles on the titles table and 
+correctly display the album name and the type of Genre of the album side by side. This will
+also order each genre alphabetically, eg all the aternatives first and clasical music next and 
+so on.
+
+4) This will list all track titles and the album title side by side where the studios of 
+both title id and the studio id matches to the same Studio name MAKE Trax.
+
+5) This query will try to match every possible field such as first name of the Memebers table
+and first name of the sales people table and it will also try to match the last name of both
+tables members and sales people and since they dont have the same First name it will display nothing
+since they dont have the same first name nor the same last name.  
+
+6) SELECT Members.FirstName,Members.LastName FROM Memebers JOIN XrefArtistsMembers
+ USING(MemberID) JOIN Artists USING (ArtistID) WHERE ArtistName Like 'The Bul%' ORDER BY
+Members.LastName DESC;

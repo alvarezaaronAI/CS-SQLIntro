@@ -1,0 +1,36 @@
+1) The primary key for the Studios Table is StudioID
+
+2) This shouldnt be the primary key because a primary key is unique and for LastName to be 
+a primary key is not possible, there might be a high chance it will repeat LastName
+
+3) The foreign key in the Tracks table is TrackNum
+
+4) We need three seperate tables to allow to know both the Artist and the members in the Artist table
+For, example we need to know each member from ArtistName
+
+5) 
+ a)The Primary key for the XRefArtistsMembers is MemberID
+
+ b)The Primary Key is the only possible primary key because is use to identify each uniquely without 
+  having any reapeting it self. Its used to identify only one person in this case. 
+
+6) 
+ a)Yes we can add this new record becuase one the Primary key has not been compromised, its still unique to
+this table which is 5, there is no 5 currently taking up the spot, so yes. 
+
+ b)No we cannot add this new record because the Primary Key is being compromised, Its no longer 
+a unique ID 4 since the person SCOTT BULL already has that primary key, therefore its not a Primary key no more
+its not unique.
+
+7) 
+	Well SELECT (NULL IS NOT NULL) is just basically 0 
+	because if NULL is not NULL then the answer must not be a null, otherwise 0
+
+	But then we see that "SELECT (NULL IS NOT NULL) ={ 0 or False}!= ( (NULL = (NOT NULL));
+	
+	The (NULL = (NOT NULL)); is an answer of NULL since no value is equal to NULL the answer to this side
+	the answer is NULL, so then we can say
+
+	False != NULL... Based on what we learned we said that (NULL IS NOT NULL) is False and since in this case (FALSE = NULL) is not the same as 
+	(NULL IS NOT NULL to equal FALSE), therefore its null.
+

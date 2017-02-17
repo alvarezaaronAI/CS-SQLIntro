@@ -1,0 +1,27 @@
+1)
+SELECT M.LastName, 
+(SELECT ST.StudioName From Studios ST WHERE ST.Region = "CA")
+AS "Studios Name"
+FROM Members M WHERE Region = "CA";
+
+2)
+SELECT M.MemberID, M.Birthday 
+FROM Members M WHERE Region = "VT"
+AND M.Birthday < ALL(SELECT M.Birthday FROM Members M WHERE Region = "NY");
+
+3)
+SELECT TR.TrackTitle FROM Tracks TR 
+JOIN Titles USING TitleID
+JOIN Artists USING ArtistID
+WHERE EntryDate > "2003-08-01";
+
+4)
+SELECT TR.TrackTitle FROM Tracks TR
+WHERE TR.TitleID IN (SELECT T.TitleID FROM Titles T WHERE T.ArtistID IN
+(SELECT A.ArtistID FROM Artists A WHERE EntryDate > "2003-08-01"));
+
+5)
+SELECT A.ArtistName FROM Artists A
+WHERE A.ArtistID IN (SELECT T.ArtistID FROM Titles T WHERE T.StudioID IN 
+(SELECT T.StudioID FROM Titles T WHERE T.ArtistID IN
+(SELECT A.ArtistID FROM Artists A WHERE A.ArtistName LIKE "The Bullets%")));

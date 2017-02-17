@@ -1,0 +1,65 @@
+1) 
+Relational Model
+
+2)
+My sql need to able able to be 
+Massive with lots of date ready to be pulled out at any time
+Persistent needing to keep up with everyting
+Safe from any malwares or physical damage
+Multi User concurrency contriol
+COnvinient 
+Efficient and Reliable
+
+3)
+The following the date cannot be added
+SalesID: Smith
+ Lastname: 70
+ Firstname: 80 
+ Initials: 90
+ Base: Jhon
+ Supervisor: Howard
+
+4)
+The query avarage will produce 5100
+
+5)
+The query returns empty set because Natural Join, joins the two colums side
+to side next to eachother only if both colums are in the same table, 
+Memebers table and Studios tables are not in the same table therefore, 
+It returns empty set, because there are two different tables trying to be join
+naturally to one.
+
+6)
+Different results for the reason that When joining both tables (Titles and Studio)and 
+match each id from both tables and only display the studioNames if non of the titlesid 
+have non-jazz music on them meaning you can have studio name with non jazz titles and the same
+studio with jazz titles, thefore displaying the studio even if they have both non jazz and jazz genres in their studios
+The second query only focus on the left, therefore if any of the titles have jazz, the studioname towards that jazz, will not appear
+
+7) 
+This would give the first and last name seperated by a comma of the Member table
+and would get the length of the longest part of either their first or last name and
+set it as MAX in a new colum. 
+
+8)
+This query would get non main contact persons in the members table and display the names 
+of those non main contacts, and display its artist name along side to it.
+
+9)
+SELECT SUM (Birthday/365.25) FROM Members WHERE Region = "VA";
+
+10)
+SELECT S.FirstName, S.LastName, ST.StudioName FROM SalesPeople S 
+Join Studios ST WHERE (S.SalesID = ST.SalesID);
+
+11)
+SELECT TR.TRackTitle, AR.ArtistName AS(By the Bullets?) FROM Artist AR 
+JOIN Titles T On (AR.ArtistID = T.TitlesID) JOIN Tracks TR ON T.TitleID =
+TR.TitleID;
+
+ CASE (TR.TrackTitle = )
+12)
+Table one "SalesPoeple" would include the Names,Birthday,Adress,PhoneNumber,Initials of all the Salespeople  and its supervisor 
+Second Table "Scissors" Would include the names,Type,DateItWasMade,ManufactureID of all the scissors incoming to the store.
+Third Table "Manufacture"would include the BrandName,ManufactureID,Adress,Location of the Manufacture scissors itself.
+

@@ -1,0 +1,51 @@
+Part 1 
+
+1)  
+   a) The purpose of primary keys is to indentify a specific information
+uniquely, the purpose for this is to get information without accesing other
+similar information. For this case we use primary key to select the exact 
+information we truely want.
+
+   b) A forgien key is a primary key of another table inside a table with 
+an existing primary key.
+
+2)
+   The mumeric index for letter c in the word "The Kicks" is 6
+
+3) 
+   We cant use aggreated functions in the where clause because for the where clause
+is executed once per row. Is the syntax and if you have multiple functions
+it would basically not following the syntax.
+
+4)
+   The answer is being returned 0 since its adding legitly what ever the 
+email values are, in this null which essentially mean nothing. So when 
+adding all the nulls values from only the students that no email address
+the answer at the end is 0.
+
+5)
+   Essentially this qeury displays the titles of all tracks that have no track
+number.
+
+6)
+   SELECT DISTINCT M.FirstName, M.LastName FROM Members M JOIN XrefArtistsMembers X
+JOIN Artists Ar ON ( X.ArtistID = Ar.ArtistID)
+WHERE Ar.ArtistName LIKE '%Word'ORDER BY LENGTH (GREATEST (M.FirstName, M.LastName)) ASC;
+
+7)
+  SELECT AVG(DATEDIFF(CURDATE(), Birthday))/365.25 FROM Members;  
+
+8)
+  SELECT DISTINCT S.SalesID FROM Salespeople S JOIN Members M ON (S.SalesID = M.SalesID)
+WHERE M.Birthday NOT LIKE ('____-__-16');
+
+9)
+  SELECT (LENGTH(LastName) <= 5 ), FirstName, LastName FROM Members  WHERE FirstName LIKE 'B%';
+  NOT LIKE  LENGTH(LastName) > 6);
+ 
+10) 
+  SELECT TrackTitle FROM TRACKS;
+
+11) 
+  SELECT 
+   

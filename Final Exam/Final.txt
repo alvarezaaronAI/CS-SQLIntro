@@ -1,0 +1,67 @@
+1)
+ The purpose of the xrefArtistsMembers is to have two two different sorts 
+of information such as an artist consist of all the members in that artist.
+So the table xref relates to that where it manages to get match up the 
+members that belong to a specific artist making it easier to just get the 
+members from a specific artist.
+
+2)
+ Well for this case it would Delete all the data inside the product tables
+but since its rolling back it ensetially just goes back and gives 
+the values inside the product table back, so nothing would have been errased.
+
+3)
+  a) well yes we dont want the sonata artist but we want to get them so then
+we can advoid them. The only reason we want the sonata artist is so then we can 
+choose not to get them.
+  b) Well when you do a left join you are checking for values that are in the 
+left and since thats the case any values on the right would end up being 
+null if a special condtion in the query happens leaving with null answers 
+WHERE the where condition looks for and those who have null it ends up 
+retrieving getting us the answer we want.
+
+4)
+MAX Condition looks for the maximum value given inside the table rows. 
+While Greatest Condition it gives the greatest number between two conditions
+Such as GREATEST(condtionA,CondtionB) which ever a or b is bigger greatest 
+would retrieve.
+
+5)
+UPDATE XrefArtistsMembers SET ArtistID = 1 WHERE 
+(Select ArtistID FROM XrefArtistsMembers WHERE ArtistID = 5);
+
+6)
+SELECT DISTINCT Title FROM Titles T JOIN Tracks TR USING(TitleID) 
+WHERE TR.LengthSeconds > 400 ORDER BY T.Title;
+
+7)
+SELECT ArtistName, COUNT(M.MemberID) FROM Artists A JOIN xrefArtistsMembers XR 
+ON(A.ArtistID = XR.ArtistID) JOIN Members M ON (XR.MemberID = M.MemberID);
+
+
+8)
+SELECT ArtistName FROM Artists A JOIN Titles T ON(A.ArtistID = T.ArtistID)
+JOIN Studios ST ON(T.StudioID = ST.StudioID)
+WHERE (ST.StudioID = T.StudioID);
+
+9)
+ a)
+	CREATE TABLE Employees (LastName CHAR(15), FirstName CHAR(15),
+ 	AnnualSalary FLOAT(255,2), LOCATION VarChar(3)) ;
+ b)
+	ALTER TABLE Employess ADD COLUMN EmployeeID INT PRIMARY KEY AUTO_INCREMENT;
+ C)
+	INSERT INTO Employees VALUES ( 1, Jones, Mary , 210000, NNJ);
+	INSERT INTO Employees VALUES ( 2, Smith, Bob , 75000, NNJ);
+	INSERT INTO Employees VALUES ( 3, Jhonson, Bill , 37000, LCA);
+ d)
+	UPDATE Employees SET AnnualSalary = annualSalary+10000 WHERE AnnualSalary < 80000;
+ e)
+	ALTER TABLE Employess ADD COLUMN Telephone INT;
+ f)
+	ALTER TABLE Employees ADD CONSTRAINT uniq UNIQUE(employeeID);
+ g)
+	UPDATE Employees SET Telphone = 0415 WHERE Location  = ("NNJ" OR "LCA");
+
+
+
